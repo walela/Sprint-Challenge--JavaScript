@@ -24,6 +24,9 @@
     constructor(side) {
       super(side, side, side);
     }
+    toString() {
+      return `Cube --> Dimensions: ${this.length}`;
+    }
     volume() {
       return Math.pow(this.length, 3);
     }
@@ -33,7 +36,7 @@
   }
 
   let cube = new CubeMaker(10);
-  console.log(`cube: `, JSON.stringify(cube));
+  console.log(cube.toString());
   console.log(`cube volume: `, cube.volume()); // 1000
   console.log(`cube surface area: `, cube.surfaceArea());
 })();
